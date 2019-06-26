@@ -1,7 +1,7 @@
 #!/bin/bash
-SBATCH --job-name=STAR-CCM+_example
-SBATCH --ntasks=12
-SBATCH --exclusive
+#SBATCH --job-name=STAR-CCM+_example
+#SBATCH --ntasks=12
+#SBATCH --exclusive
 
 #Ensures that module loads
 source /etc/profile.d/modules.sh
@@ -12,7 +12,7 @@ export CDLMD_LICENSE_FILE=1999@flex.cd-adapco.com
 #STAR-CCM+ license key (not in the case of power on demand)
 #LM_PROJCET=
 
-#Scaratch
+#Scartch
 mkdir /state/partition1/starccmtmp
 export STAR_MASTER_TMPDIR=/state/partition1/starccmtmp
 
