@@ -16,11 +16,14 @@ export CDLMD_LICENSE_FILE=1999@flex.cd-adapco.com
 mkdir /state/partition1/starccmtmp
 export STAR_MASTER_TMPDIR=/state/partition1/starccmtmp
 
-#STAR-CCM+ module
+#STAR-CCM+ module (NB! generic, replace with the actual one)
 module load STAR-CCM+
 
-#STAR-CCM+ run computation
+#STAR-CCM+ run computation (any network type)
 starccm+ -power -podkey YOUR_KEY_HERE -batch run -np 12 $@
+
+#STAR-CCM+ run computation with forced TCP connection (uncomment this and comment previous for usage)
+#starccm+ -power -fabric TCP -podkey YOUR_KEY_HERE -batch run -np 12 $@
 
 #Remove STAR-CCM+ temporary files
 sleep 10
