@@ -14,7 +14,7 @@ export CDLMD_LICENSE_FILE=1999@flex.cd-adapco.com
 
 #Scartch
 mkdir /state/partition1/starccmtmp
-export STAR_MASTER_TMPDIR=/state/partition1/starccmtmp
+export STAR_MASTER_TMPDIR=/state/partition1/starccmtmp$(id -u)
 
 #STAR-CCM+ module (NB! generic, replace with the actual one)
 module load STAR-CCM+
@@ -27,4 +27,4 @@ starccm+ -power -podkey YOUR_KEY_HERE -batch run -np 12 $@
 
 #Remove STAR-CCM+ temporary files
 sleep 10
-rm -rf /state/partition1/starccmtmp
+rm -rf $STAR_MASTER_TMPDIR
