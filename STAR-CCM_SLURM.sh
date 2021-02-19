@@ -13,8 +13,8 @@ export CDLMD_LICENSE_FILE=1999@flex.cd-adapco.com
 #LM_PROJCET=
 
 #Scartch
-mkdir /state/partition1/starccmtmp
 export STAR_MASTER_TMPDIR=/state/partition1/starccmtmp$(id -u)
+mkdir $STAR_MASTER_TMPDIR
 
 #STAR-CCM+ module (NB! generic, replace with the actual one)
 module load STAR-CCM+
